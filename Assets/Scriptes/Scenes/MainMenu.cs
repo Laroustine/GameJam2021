@@ -39,10 +39,12 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("SampleScene");
     }
+
     public void Exit()
     {
         Application.Quit();
     }
+
     public void SetVolume(float volume)
     {
         audioMixer.SetFloat("Volum", volume);
@@ -58,6 +60,7 @@ public class MainMenu : MonoBehaviour
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
+
     public void SetingMenu()
     {
         settingsWindow.SetActive(true);
