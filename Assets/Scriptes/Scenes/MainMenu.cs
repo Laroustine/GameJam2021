@@ -17,6 +17,7 @@ public class MainMenu : MonoBehaviour
     {
         resolutions = Screen.resolutions;
         resolutionDropDown.ClearOptions();
+        settingsWindow.SetActive(false);
 
         List<string> options = new List<string>();
 
