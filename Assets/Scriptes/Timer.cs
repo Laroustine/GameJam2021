@@ -38,7 +38,7 @@ public class Timer : MonoBehaviour
         }
     }
 
-    void Paly()
+    void PlayMusic()
     {
         ambientAudio.UnPause();
     }
@@ -62,7 +62,7 @@ public class Timer : MonoBehaviour
             }
             if (time > pauseTab[pauseNbr] + timeOfTheFlash) {
                 flash = false;
-                Paly();
+                PlayMusic();
                 pauseNbr++;
                 startTime += timeOfTheFlash;
             }
