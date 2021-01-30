@@ -5,20 +5,19 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    private float timeOfTheFlash;
-    private float timeOfTheMusic;
     public int lenOfTabPause;
-    public int[] pauseTab;
-    private int pauseNbr = 0;
-
-    private float startTime;
     public AudioSource ambientAudio;
     public AudioSource flashaudio;
-
     public bool flash = false;
     public bool end = false;
     public int timeAfterEnd = 3;
-        
+    public int[] pauseTab;
+
+    private float timeOfTheFlash;
+    private float timeOfTheMusic;
+    private int pauseNbr = 0;
+    private float startTime;
+
     private void Start()
     {
         int inpleNewTab = 0;
@@ -54,6 +53,7 @@ public class Timer : MonoBehaviour
     {
 
     }
+
     void Update()
     {
         float time = Time.time - startTime;
