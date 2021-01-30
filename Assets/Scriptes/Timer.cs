@@ -49,11 +49,6 @@ public class Timer : MonoBehaviour
         flashaudio.Play();
     }
 
-    void MusicSwitch(float time)
-    {
-
-    }
-
     void Update()
     {
         float time = Time.time - startTime;
