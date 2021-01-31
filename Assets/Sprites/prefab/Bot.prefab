@@ -302,6 +302,7 @@ MonoBehaviour:
   destination: {fileID: 2372854430766813862}
   xYMax: {x: 11, y: 4}
   xYMini: {x: -11, y: -4}
+  responeTime: 10
 --- !u!50 &2372854430766813883
 Rigidbody2D:
   serializedVersion: 4
