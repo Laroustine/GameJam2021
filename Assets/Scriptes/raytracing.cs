@@ -6,12 +6,17 @@ public class raytracing : MonoBehaviour
 {
     public Timer _Timer;
     float time;
+<<<<<<< HEAD
+=======
+    public GameObject textWin;
+>>>>>>> 909e6c141e33330a3c03fadb2c30aaed6dbcc639
     public bool Rotation = false;
     public float viewRadius  = 5;
     public float viewAngle  = 5;
     Collider2D[] playerInRadius;
     [SerializeField] LayerMask obstacleMask, playerMask;
     private LayerMask target;
+    private bool myWin;
     GameObject objTarget;
     public float speed = 10;
     public List<Transform> visiblePlayer = new List<Transform>();
@@ -19,7 +24,8 @@ public class raytracing : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        myWin = false;
+        textWin.SetActive(false);
     }
 
     // Update is called once per frame
@@ -32,7 +38,11 @@ public class raytracing : MonoBehaviour
             if (Input.GetKey(KeyCode.LeftArrow))
                 transform.Rotate(Vector3.forward * speed * Time.deltaTime);
         }
+<<<<<<< HEAD
         if (_Timer.end == true) 
+=======
+        if (_Timer.end == true && myWin == true) 
+>>>>>>> 909e6c141e33330a3c03fadb2c30aaed6dbcc639
         {
             IsEnd(time);
         }
@@ -64,6 +74,10 @@ public class raytracing : MonoBehaviour
                             Debug.DrawLine(transform.position, player.position, Color.white, 0);
                             if (!visiblePlayer.Contains(player)) {
                                 _Timer.end = true;
+<<<<<<< HEAD
+=======
+                                myWin = true;
+>>>>>>> 909e6c141e33330a3c03fadb2c30aaed6dbcc639
                                 time = Time.time;
                             }
                         }
@@ -75,7 +89,12 @@ public class raytracing : MonoBehaviour
     void IsEnd(float time) 
     {
         float new_time = Time.time;
+<<<<<<< HEAD
         if (new_time > time+3)
+=======
+        textWin.SetActive(true);
+        if (new_time > time + 3)
+>>>>>>> 909e6c141e33330a3c03fadb2c30aaed6dbcc639
             SceneManager.LoadScene("MainMenu");
     }
 }
