@@ -1950,6 +1950,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1620178446}
     m_Modifications:
+    - target: {fileID: 4215115589791113499, guid: ef647bc3f4c9c88239e2bc6064075bf9, type: 3}
+      propertyPath: up
+      value: 114
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215115589791113499, guid: ef647bc3f4c9c88239e2bc6064075bf9, type: 3}
+      propertyPath: down
+      value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215115589791113499, guid: ef647bc3f4c9c88239e2bc6064075bf9, type: 3}
+      propertyPath: left
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215115589791113499, guid: ef647bc3f4c9c88239e2bc6064075bf9, type: 3}
+      propertyPath: right
+      value: 103
+      objectReference: {fileID: 0}
     - target: {fileID: 4215115589791113502, guid: ef647bc3f4c9c88239e2bc6064075bf9, type: 3}
       propertyPath: m_Name
       value: PlayerDeux
