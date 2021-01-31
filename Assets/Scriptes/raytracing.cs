@@ -8,6 +8,8 @@ public class raytracing : MonoBehaviour
     public float viewAngle  = 5;
     Collider2D[] playerInRadius;
     [SerializeField] LayerMask obstacleMask, playerMask;
+    private LayerMask target;
+    GameObject objTarget;
     public float speed = 10;
     public List<Transform> visiblePlayer = new List<Transform>();
 
@@ -46,10 +48,15 @@ public class raytracing : MonoBehaviour
                 float distancePlayer = Vector2.Distance(transform.position, player.position);
                 if (!Physics2D.Raycast(transform.position, dirPlayer, distancePlayer, obstacleMask) && player != transform)
                 {
+                    objTarget = player.gameObject;
+                    // take the LayerMask and convert it, in int for compare with layer
+                    int layer = (int) Mathf.Log(playerMask.value, 2);
+                    if (objTarget.layer == layer) {
                     /*draw the line when contact with other player*/
-                    Debug.DrawLine(transform.position, player.position, Color.white, 0);
-                    if (!visiblePlayer.Contains(player))
-                        visiblePlayer.Add(player);
+                        Debug.DrawLine(transform.position, player.position, Color.white, 0);
+                        if (!visiblePlayer.Contains(player))
+                            visiblePlayer.Add(player);
+                    }
                 }
             }
         }
