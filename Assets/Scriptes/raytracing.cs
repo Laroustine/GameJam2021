@@ -35,7 +35,7 @@ public class raytracing : MonoBehaviour
             if (Input.GetKey(KeyCode.LeftArrow))
                 transform.Rotate(Vector3.forward * speed * Time.deltaTime);
         }
-        if (_Timer.end == true && myWin == true) 
+        if (_Timer.end == true && myWin == true)
         {
             IsEnd(time);
         }
