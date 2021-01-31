@@ -7,6 +7,7 @@ public class ColitionTp : MonoBehaviour
     public GameObject destination;
     public Vector2 xYMax;
     public Vector2 xYMini;
+    public float responeTime;
     private float startTime;
 
     void Start()
@@ -17,7 +18,7 @@ public class ColitionTp : MonoBehaviour
     void Update()
     {
         float time = Time.time - startTime;
-        if (time > 20) {
+        if (time > responeTime) {
             destination.transform.position = new Vector3(Random.Range(xYMax.x, xYMini.x), Random.Range(xYMax.y, xYMini.y), 0);
             startTime = Time.time;
         }

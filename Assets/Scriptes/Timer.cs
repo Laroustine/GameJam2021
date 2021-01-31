@@ -12,6 +12,7 @@ public class Timer : MonoBehaviour
     public bool end = false;
     public int timeAfterEnd = 3;
     public int[] pauseTab;
+    public GameObject bot;
 
     private float timeOfTheFlash;
     private float timeOfTheMusic;
@@ -41,11 +42,13 @@ public class Timer : MonoBehaviour
     void PlayMusic()
     {
         ambientAudio.UnPause();
+        bot.SetActive(true);
     }
 
     void Pause()
     {
         ambientAudio.Pause();
+        bot.SetActive(false);
         flashaudio.Play();
     }
 
@@ -65,7 +68,11 @@ public class Timer : MonoBehaviour
                 PlayMusic();
                 pauseNbr++;
                 startTime += timeOfTheFlash;
+
             }
+        }
+        if (end == true) {
+            bot.SetActive(false);
         }
     }
 }
