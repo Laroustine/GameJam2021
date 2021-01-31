@@ -12,6 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Scenes/Maps/Map 1.unity
     guid: 58ae562b848276f49820569be18e3868
+=======
+    path: Assets/Scenes/MapBasic.unity
+    guid: b8b7cd42d161788d2a0d64adf58af434
+>>>>>>> d65cc33... [ADD] MapBasic
   m_configObjects: {}

@@ -1,8 +1,11 @@
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class raytracing : MonoBehaviour
 {
+    public Timer _Timer;
+    float time;
     public bool Rotation = false;
     public float viewRadius  = 5;
     public float viewAngle  = 5;
@@ -29,6 +32,10 @@ public class raytracing : MonoBehaviour
             if (Input.GetKey(KeyCode.LeftArrow))
                 transform.Rotate(Vector3.forward * speed * Time.deltaTime);
         }
+        if (_Timer.end == true) 
+        {
+            IsEnd(time);
+        }
     }
 
     void FixedUpdate() 
@@ -43,7 +50,7 @@ public class raytracing : MonoBehaviour
         {
             Transform player = playerInRadius[i].transform;
             Vector2 dirPlayer = new Vector2(player.position.x - transform.position.x, player.position.y - transform.position.y);
-            if (Vector2.Angle(dirPlayer, transform.right) < viewAngle / 2)
+            if (Vector2.Angle(dirPlayer, -transform.up) < viewAngle / 2)
             {
                 float distancePlayer = Vector2.Distance(transform.position, player.position);
                 if (!Physics2D.Raycast(transform.position, dirPlayer, distancePlayer, obstacleMask) && player != transform)
@@ -51,14 +58,24 @@ public class raytracing : MonoBehaviour
                     objTarget = player.gameObject;
                     // take the LayerMask and convert it, in int for compare with layer
                     int layer = (int) Mathf.Log(playerMask.value, 2);
-                    if (objTarget.layer == layer) {
-                    /*draw the line when contact with other player*/
-                        Debug.DrawLine(transform.position, player.position, Color.white, 0);
-                        if (!visiblePlayer.Contains(player))
-                            visiblePlayer.Add(player);
+                    if (_Timer.flash == true) {
+                        if (objTarget.layer == layer) {
+                        /*draw the line when contact with other player*/
+                            Debug.DrawLine(transform.position, player.position, Color.white, 0);
+                            if (!visiblePlayer.Contains(player)) {
+                                _Timer.end = true;
+                                time = Time.time;
+                            }
+                        }
                     }
                 }
             }
         }
+    }
+    void IsEnd(float time) 
+    {
+        float new_time = Time.time;
+        if (new_time > time+3)
+            SceneManager.LoadScene("MainMenu");
     }
 }

@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 113613033}
   - component: {fileID: 113613032}
   - component: {fileID: 113613031}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: wool (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 468809528}
   - component: {fileID: 468809527}
   - component: {fileID: 468809526}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: wool (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -352,7 +352,7 @@ GameObject:
   - component: {fileID: 657566394}
   - component: {fileID: 657566393}
   - component: {fileID: 657566392}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: wool (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -450,6 +450,17 @@ Transform:
   m_Father: {fileID: 897795336}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &868548053 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6606360608410316919, guid: cfc54ce0db59d7b28851b1d36ae664ae, type: 3}
+  m_PrefabInstance: {fileID: 8950834571957292412}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f4fa6d2ee8b9b0cba86f276699006ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &897795335
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,7 +470,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 897795336}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -499,7 +510,7 @@ GameObject:
   - component: {fileID: 1209656174}
   - component: {fileID: 1209656173}
   - component: {fileID: 1209656172}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: wool (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -608,7 +619,7 @@ GameObject:
   - component: {fileID: 1377752938}
   - component: {fileID: 1377752937}
   - component: {fileID: 1377752936}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: wool (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -706,6 +717,35 @@ Transform:
   m_Father: {fileID: 897795336}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &1377947806 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8950834572121227271, guid: cfc54ce0db59d7b28851b1d36ae664ae, type: 3}
+  m_PrefabInstance: {fileID: 8950834571957292412}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1377947813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377947806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e565ad22ae3ccab3a8d5e26965abdf70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Timer: {fileID: 868548053}
+  Rotation: 0
+  viewRadius: 100
+  viewAngle: 50
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 64
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  speed: 10
+  visiblePlayer: []
 --- !u!1 &1604290019
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,7 +757,7 @@ GameObject:
   - component: {fileID: 1604290022}
   - component: {fileID: 1604290021}
   - component: {fileID: 1604290020}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: wool (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -827,7 +867,7 @@ GameObject:
   - component: {fileID: 1711871919}
   - component: {fileID: 1711871918}
   - component: {fileID: 1711871921}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: wool (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -957,7 +997,7 @@ GameObject:
   - component: {fileID: 2027888960}
   - component: {fileID: 2027888959}
   - component: {fileID: 2027888958}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: wool (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1133,7 +1173,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2015359578468447380, guid: aa156fd4250653a73ba3f5aa0a1d90fc, type: 3}
       propertyPath: data.dataString
-      value: UEsDBBQAAAgIAAAIIeyR07xOdQIAABwFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMzoXxF7HprXUI6SEfE9rJxRdhr7EGWfJIcoBk+O9dyTZ26Qnxdvfp7duVvwgTuoHcSLVRrHiSBZDvM2LP5NtsDD7Cie6l2LJPGHLeWWEqm0Rdzhs1TCLu2zItazCK5T/EnttkD8FWsFKqel3sIZXaaIRLyjVgSEljqwVCXzNywp/5ypac8RTE9vSJp5U3u+AxB2FATVKDReh5cbjykvXci/uyaBHfJWHsLwfQMgSLJAr82IvC9dyPHFsrck7rBgrb2kgaRD2PH7g0gU33GbbBXHLOdK+YmHPjHElpo1vsFxMKRtEBJ9NfhAhUwPaVsczT8pey1GB6gxQ93zOFVna85Kfs/K2pPnTKPihvnYQgcao60qf/4nPfhUsl68fhXt+zd5iK5Yc3es6pNpMBTOH7iXRn0JHyA91xeK9APMuNkq0oMGhUa0tbDcH9+PfaWlpBfhjxTuoN2Daj48O8h2nbHi6u+1PKWb2zoUXUAVsuneNuSUDhbH6hYLdCuqdA1Kr4o+E33U93rQ88MKUNhvouhZW3k62yqWTtPLPdtCaVSoCDe9ENCMrN+RVpzO0Ib2KTa28iD9S+qv7yPjY8lpsSB4/5nncTepXH67B0JY9PoKuX1nAmYBRtA8/oUyqF6DZs6slQtm1VSfNJ2b5lxb+rRVZ3NPTyYrfcJUnkJdE83sVLCDyAcLcsg8InbveYwD4pf+2E9vbg1MRILnDPho/NbKNo47a9UPS4YZ+1nFjORCm3uQIQLx3DVTgovATfZbEuGBq0BWOYcPMmXxnhMj9AkV2JMtfp+mQUzUaWjDTsQxqLZCR1X5eMXMjlL1BLAwQUAAAICAAACCHs4D0hdW0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNVRUEovSizIKAaKGII4pZkpIHa0kqVZorFBckqSaZKFhYmBhYmueZK5aaqRQWqqcZJpmlGKoVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAACCHskdO8TnUCAAAcBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAACCHs4D0hdW0AAAB4AAAACQAkAAAAAAAAAAAAAADCAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAHoDAAAAAA==
+      value: UEsDBBQAAAgIAAAIIeykoBqzdQIAABsFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMzoXxFzH01jqE9JCPCe3k4otsr7EGWfJIcoBk+O9dyTZ26Qnx3u7T7tuVvwgTuoHcSLVVrHiSBZDvM2LP5NtsJB/hRPdS7NgnDDHvrDCVDaIu5o0aJhH3bZqWNRjF8h9iz22wh2ArWClVvSn2kEhtNMIl5RqQUtLYbIHQ14yc8Ge+tilnPAWxPX3iae3NLnjMQRhQk9BgEXpeHK691WbuxX1atIjvVmHsLwfQKgSLVRT4sReFm7kfObVW5JzWDRS2tVE0iHodP3BhApvuI2yDueSc6b5iYs6NcyShjW6xXwwoGEUHXJn+IkSgAravjFWepr+UpQbTG6To+Z4ptLLTJT9l529N9aGr7IPy1t5019XeaT79R899R5dK1o/Dtb5nrzAVyw9v9JxTbSb+T+H7SeXOnyPlB5pxeK9APMutkq0okDSqtamthuB+/HvtLKkgP4x4V+oN2Daj4cO4h2HbHi6u+VPCWZ1ZahF1wI5LZ7jbEVA4ml9YsNsg3Usgaqv4o+E33U9XrScemNIGqb5LYcvLZKtsKNk4z2w3rUmkEuDgvugGBOXm/Ioy5naCN9zk2hvmgdpH1V/ec8NbuUlx8BjveTfUqzxeh6UreXwCXb20hjMBY9GWeEafEilEt2BTT4a0XatKmk/S9i0r/l0tsr6joZcX2TJbrSJvFc3jLF5C4AGE2bIMCp+43WMC+6T8tSu0twenJkZxgXs2fGtmW0Ubt+yFosct+6zlxHImSrnLFYB46RSuhYPCS/BZFpuCoUE7MIYJN2/ylRIu8wMU6VUodZ1uTkbRdFRJScM+pLFIShL3cUnJhVz+AlBLAwQUAAAICAAACCHs4D0hdW0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNVRUEovSizIKAaKGII4pZkpIHa0kqVZorFBckqSaZKFhYmBhYmueZK5aaqRQWqqcZJpmlGKoVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAACCHspKAas3UCAAAbBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAACCHs4D0hdW0AAAB4AAAACQAkAAAAAAAAAAAAAADCAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAHoDAAAAAA==
       objectReference: {fileID: 0}
     - target: {fileID: 2015359578468447381, guid: aa156fd4250653a73ba3f5aa0a1d90fc, type: 3}
       propertyPath: m_RootOrder
@@ -1192,6 +1232,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1372330564877126255, guid: 446e3746f72f0471b91a097e8b294af4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5327791138132284782, guid: 446e3746f72f0471b91a097e8b294af4, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1239,6 +1283,18 @@ PrefabInstance:
     - target: {fileID: 5327791138132284783, guid: 446e3746f72f0471b91a097e8b294af4, type: 3}
       propertyPath: m_Name
       value: border
+      objectReference: {fileID: 0}
+    - target: {fileID: 8737289297892907230, guid: 446e3746f72f0471b91a097e8b294af4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8737289297927442805, guid: 446e3746f72f0471b91a097e8b294af4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8737289299472043328, guid: 446e3746f72f0471b91a097e8b294af4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 446e3746f72f0471b91a097e8b294af4, type: 3}
