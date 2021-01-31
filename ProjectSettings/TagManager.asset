@@ -13,12 +13,17 @@ TagManager:
   - UI
   - Post Processing
 <<<<<<< HEAD
+<<<<<<< HEAD
   - obstacle
   - 
 =======
   - Obstacle
   - Player
 >>>>>>> 042a079... [ADD] Change Layer
+=======
+  - Obstacle
+  - Player
+>>>>>>> 042a079fd3b842908361db841e7dd05577def407
   - 
   - 
   - 
