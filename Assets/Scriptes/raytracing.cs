@@ -37,18 +37,19 @@ public class raytracing : MonoBehaviour
     {
         playerInRadius = Physics2D.OverlapCircleAll(transform.position, viewRadius);
 
-        for (int i = 1; i < playerInRadius.Length; i++)
+        for (int i = 0; i < playerInRadius.Length; i++)
         {
             Transform player = playerInRadius[i].transform;
             Vector2 dirPlayer = new Vector2(player.position.x - transform.position.x, player.position.y - transform.position.y);
             if (Vector2.Angle(dirPlayer, transform.right) < viewAngle / 2)
             {
                 float distancePlayer = Vector2.Distance(transform.position, player.position);
-                if (!Physics2D.Raycast(transform.position, dirPlayer, distancePlayer, obstacleMask))
+                if (!Physics2D.Raycast(transform.position, dirPlayer, distancePlayer, obstacleMask) && player != transform)
                 {
                     /*draw the line when contact with other player*/
                     Debug.DrawLine(transform.position, player.position, Color.white, 0);
-                    visiblePlayer.Add(player);
+                    if (!visiblePlayer.Contains(player))
+                        visiblePlayer.Add(player);
                 }
             }
         }
