@@ -37,7 +37,7 @@ public class MainMenu : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("MapBasic");
     }
 
     public void Exit()
