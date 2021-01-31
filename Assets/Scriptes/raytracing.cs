@@ -6,12 +6,14 @@ public class raytracing : MonoBehaviour
 {
     public Timer _Timer;
     float time;
+    public GameObject textWin;
     public bool Rotation = false;
     public float viewRadius  = 5;
     public float viewAngle  = 5;
     Collider2D[] playerInRadius;
     [SerializeField] LayerMask obstacleMask, playerMask;
     private LayerMask target;
+    private bool myWin;
     GameObject objTarget;
     public float speed = 10;
     public List<Transform> visiblePlayer = new List<Transform>();
@@ -19,7 +21,8 @@ public class raytracing : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        myWin = false;
+        textWin.SetActive(false);
     }
 
     // Update is called once per frame
@@ -32,7 +35,7 @@ public class raytracing : MonoBehaviour
             if (Input.GetKey(KeyCode.LeftArrow))
                 transform.Rotate(Vector3.forward * speed * Time.deltaTime);
         }
-        if (_Timer.end == true) 
+        if (_Timer.end == true && myWin == true) 
         {
             IsEnd(time);
         }
@@ -64,6 +67,7 @@ public class raytracing : MonoBehaviour
                             Debug.DrawLine(transform.position, player.position, Color.white, 0);
                             if (!visiblePlayer.Contains(player)) {
                                 _Timer.end = true;
+                                myWin = true;
                                 time = Time.time;
                             }
                         }
@@ -75,7 +79,8 @@ public class raytracing : MonoBehaviour
     void IsEnd(float time) 
     {
         float new_time = Time.time;
-        if (new_time > time+3)
+        textWin.SetActive(true);
+        if (new_time > time + 3)
             SceneManager.LoadScene("MainMenu");
     }
 }
